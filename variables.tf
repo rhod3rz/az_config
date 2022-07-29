@@ -23,6 +23,11 @@ variable "unique_id" {
   description = "A unique differentiator e.g. 220523-1752"
 }
 
+variable "unique_time" {
+  type        = string
+  description = "A unique shortened differentiator e.g. 1752"
+}
+
 variable "region_shortname_mapping" {
   type        = map(string)
   description = "Mapping from Azure region to rhod3rz region code."
