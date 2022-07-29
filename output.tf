@@ -15,6 +15,8 @@ output "item_name" {
     pip_afw_primary            = lower("pip-${var.environment}-${lookup(var.region_shortname_mapping, var.location_primary)}-afw-${var.application_code}-${var.unique_id}")
     pip_agw_primary            = lower("pip-${var.environment}-${lookup(var.region_shortname_mapping, var.location_primary)}-agw-${var.application_code}-${var.unique_id}")
     resource_group             = lower("rg-${var.environment}-${var.application_code}-${var.unique_id}")
+    sa_primary                 = lower("sa${var.environment}${lookup(var.region_shortname_mapping, var.location_primary)}${var.application_code}")
+    sa_secondary               = lower("sa${var.environment}${lookup(var.region_shortname_mapping, var.location_secondary)}${var.application_code}")
     sql_server_primary         = lower("sql-${var.environment}-${lookup(var.region_shortname_mapping, var.location_primary)}-${var.application_code}-${var.unique_id}")
     sql_server_secondary       = lower("sql-${var.environment}-${lookup(var.region_shortname_mapping, var.location_secondary)}-${var.application_code}-${var.unique_id}")
     vm_primary                 = lower("vm${var.environment}${lookup(var.region_shortname_mapping, var.location_primary)}${var.application_code}")
