@@ -9,6 +9,8 @@ output "item_name" {
     ase_secondary              = lower("ase-${var.environment}-${lookup(var.region_shortname_mapping, var.location_secondary)}-${var.application_code}-${var.unique_id}")
     asp_primary                = lower("plan-${var.environment}-${lookup(var.region_shortname_mapping, var.location_primary)}-${var.application_code}-${var.unique_id}")
     asp_secondary              = lower("plan-${var.environment}-${lookup(var.region_shortname_mapping, var.location_secondary)}-${var.application_code}-${var.unique_id}")
+    bas_primary                = lower("bas-${var.environment}-${lookup(var.region_shortname_mapping, var.location_primary)}-${var.application_code}")
+    bas_secondary              = lower("bas-${var.environment}-${lookup(var.region_shortname_mapping, var.location_secondary)}-${var.application_code}")
     law_primary                = lower("log-${var.environment}-${lookup(var.region_shortname_mapping, var.location_primary)}-${var.application_code}-${var.unique_id}")
     law_secondary              = lower("log-${var.environment}-${lookup(var.region_shortname_mapping, var.location_secondary)}-${var.application_code}-${var.unique_id}")
     mysql_server_primary       = lower("mysql-${var.environment}-${lookup(var.region_shortname_mapping, var.location_primary)}-${var.application_code}-${var.unique_id}")
